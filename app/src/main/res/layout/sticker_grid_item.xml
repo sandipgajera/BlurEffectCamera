@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/sticker_gllery_grid_item_layout_size"
+    android:layout_height="@dimen/sticker_gllery_grid_item_layout_size"
+    android:padding="@dimen/sticker_gllery_grid_item_layout_padding">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/sticker_gllery_grid_item_image_size"
+        android:layout_height="@dimen/sticker_gllery_grid_item_image_size"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/image_view_item_selected"
+        android:layout_width="@dimen/sticker_gallery_grid_item_selected_item_size"
+        android:layout_height="@dimen/sticker_gallery_grid_item_selected_item_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/purple_200"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/done"
+        android:textColor="#ffffffff"
+        android:visibility="visible" />
+
+</RelativeLayout>

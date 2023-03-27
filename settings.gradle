@@ -1,0 +1,3 @@
+include ':wysaid'
+include ':app'
+rootProject.name = "Blur Effect Camera"

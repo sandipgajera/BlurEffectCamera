@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nocrop_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff777777">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/square_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/square_footer_button_color_normal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/square_footer_imagebutton_style"
+            android:src="@drawable/square_cancel" />
+
+        <ImageButton
+            style="@style/square_footer_imagebutton_style"
+            android:src="@drawable/square_save" />
+    </LinearLayout>
+
+    <com.photo.blureffectcamera.lyrebirdlib.MyViewFlipper
+        android:id="@+id/square_view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/square_footer"
+        android:background="@android:color/transparent"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/rotate_left"
+                android:text="@string/square_lib_rotate_left" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/rotate_right"
+                android:text="@string/square_lib_rotate_right" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/flip_horizontal"
+                android:text="@string/collage_lib_context_button_horizontal" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/flip_vertical"
+                android:text="@string/collage_lib_context_button_vertical" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_inside"
+                android:text="@string/square_lib_rotate_fit_inside" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_fill"
+                android:text="@string/square_lib_rotate_fit_fill" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#ff444444"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/button_collage_pattern_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_hide_button"
+                    android:clickable="true"
+                    android:onClick="myClickHandler"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="12.0dip"
+                    android:src="@drawable/ic_photo_black_24dp" />
+
+                <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/recyclerView_pattern"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/square_recycler_view_height"
+                    android:layout_gravity="bottom"
+                    android:scrollbars="horizontal"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/color_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#ff444444"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/hide_color_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_hide_button"
+                    android:clickable="true"
+                    android:onClick="myClickHandler"
+                    android:paddingLeft="1.0dip"
+                    android:paddingRight="1.0dip"
+                    android:src="@drawable/arrow_down" />
+
+                <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/recyclerView_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/square_recycler_view_height"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="horizontal"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#cc535353"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <SeekBar
+                android:id="@+id/nocrop_blur_seek_bar"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.0"
+                android:max="100"
+                android:progress="56" />
+
+            <TextView
+                android:id="@+id/square_blur_text_view"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="@string/_14" />
+            "
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/square_footer" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#cc535353"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="1.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/square_lib_blur"
+                    android:textColor="#ffffffff" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_square_cascade_blur"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="56" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/square_lib_cascade_number"
+                    android:textColor="#ffffffff" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_square_cascade_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:max="3"
+                    android:progress="3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="1.0dip"
+            android:visibility="invisible" />
+    </com.photo.blureffectcamera.lyrebirdlib.MyViewFlipper>
+
+    <HorizontalScrollView
+        android:id="@+id/square_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_mode_original"
+                android:text="@string/hdr_fx_original" />
+
+            <Button
+                android:id="@+id/button_square_layout"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_tools"
+                android:text="@string/square_lib_footer_tools" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/sticker_snap"
+                android:text="@string/square_lib_footer_sticker" />
+
+            <Button
+                android:id="@+id/button_square_background"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/background_icon"
+                android:text="@string/square_lib_footer_background" />
+
+            <Button
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_crop_icon"
+                android:text="@string/square_lib_footer_crop" />
+
+            <Button
+                android:id="@+id/button_square_blur"
+                style="@style/square_footer_imagebutton_style"
+                android:text="@string/square_lib_footer_blur"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button_square_cascade"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_cascade"
+                android:text="@string/collage_lib_footer_button_cascade" />
+
+            <Button
+                android:id="@+id/button_square_frame"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_frame"
+                android:text="@string/square_lib_footer_frame" />
+
+            <Button
+                android:id="@+id/button_square_fx"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_fx"
+                android:text="@string/square_lib_footer_fx" />
+
+            <Button
+                android:id="@+id/button_mirror_text"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_text_icon"
+                android:text="@string/square_lib_footer_text" />
+
+            <Button
+                android:id="@+id/button_square_adj"
+                style="@style/square_footer_imagebutton_style"
+                android:drawableTop="@drawable/square_adjustment"
+                android:text="@string/square_lib_footer_filter" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/sticker_grid_fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.photo.blureffectcamera.sticker.StickerFrameLayout
+        android:id="@+id/sticker_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@+id/crop_fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</RelativeLayout>

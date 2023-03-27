@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#331C3A</color>
+    <color name="purple_500">#331C3A</color>
+    <color name="purple_700">#331C3A</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="__picker_item_photo_border_selected">#ff99cc00</color>
+    <color name="dark_grey">#ff212020</color>
+    <color name="light_purpul">#5D356A</color>
+    <color name="color_yellow">#FFE330</color>
+
+    <color name="gallery_folder_path_text_color">#ffffffff</color>
+    <color name="gallery_folder_count_text_color">#ffdddddd</color>
+
+    <color name="gallery_ok_button_normal">#ffef695a</color>
+    <color name="gallery_ok_button_pressed">#ffed7c70</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_pattern_delete_bg">#ff559988</color>
+    <color name="color_pattern_delete_bg_pressed">#ff99ccbb</color>
+    <color name="text_lib_toolbar_button_bg_pressed">#ff000000</color>
+    <color name="text_lib_toolbar_button_bg">#ff313131</color>
+    <color name="selected_text_color">#ffe46b00</color>
+    <color name="square_footer_button_color_normal">#ff020608</color>
+    <color name="square_footer_button_color_pressed">#ff9C27B0</color>
+    <color name="footer_button_color_pressed">#ff9C27B0</color>
+    <color name="view_flipper_bg_color">#ff535353</color>
+    <color name="lib_header_bg">#ff283240</color>
+    <color name="lib_footer_button_color_pressed">#01579B</color>
+    <color name="lib_footer_second_bg">#ff1c1e25</color>
+    <color name="collage_footer_button_color_normal">#ff020608</color>
+    <color name="collage_blue_pressed">#ff2387a5</color>
+    <color name="context_menu_button_text_color">#ffffffff</color>
+    <color name="collage_tool_background_color">#ff535353</color>
+    <color name="lib_main_activity_color">#ff242a33</color>
+    <color name="lib_footer_button_color_normal">#ff1f222b</color>
+    <color name="off_white">#f5f5f5</color>
+    <color name="lib_adjustment_text_color">#ffffff</color>
+    <color name="gray_light">#D8D8D8</color>
+
+</resources>

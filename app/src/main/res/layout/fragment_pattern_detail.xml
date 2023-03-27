@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffeeeeef"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pattern_detail_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="#ff111111"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/button_pattern_detail_back"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="10.0dip"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/text_view_name_pattern_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21.0dip"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textSize="21.0sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view_pattern_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pattern_detail_header"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_pattern_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/pattern_detail_footer"
+        android:layout_below="@+id/image_view_pattern_detail"
+        android:scrollbars="vertical" />
+
+    <FrameLayout
+        android:id="@+id/pattern_detail_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="#ffe0e0e0"
+        android:gravity="center" >
+
+    
+
+        <FrameLayout
+            android:id="@+id/pattern_detail_progress_container"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center"
+            android:paddingLeft="40.0dip"
+            android:paddingRight="40.0dip"
+            android:visibility="invisible" >
+
+            <ProgressBar
+                android:id="@+id/progress_bar_pattern_download"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:maxHeight="12.0dip"
+                android:minHeight="12.0dip"
+                android:progress="0"
+                android:progressDrawable="@drawable/greenprogress" />
+
+            <TextView
+                android:id="@+id/text_view_pattern_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progress_bar_pattern_download"
+                android:layout_alignTop="@+id/progress_bar_pattern_download"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0%"
+                android:textColor="#ffffffff"
+                android:textSize="13.0sp" />
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

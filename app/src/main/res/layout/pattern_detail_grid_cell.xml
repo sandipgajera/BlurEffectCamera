@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2.0dip"
+    android:background="#ffccdddd"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/pattern_detail_grid_cell_padding" >
+
+    <ImageView
+        android:id="@+id/pattern_detail_grid_image_view"
+        android:layout_width="@dimen/pattern_detail_grid_cell_size"
+        android:layout_height="@dimen/pattern_detail_grid_cell_size"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

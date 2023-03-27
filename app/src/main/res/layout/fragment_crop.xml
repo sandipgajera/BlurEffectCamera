@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff777777"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:id="@+id/apply_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_500"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/header_button_style"
+            android:text="@string/square_lib_footer_crop"
+            android:textSize="@dimen/control_name_text_size"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/button_cancel_action"
+            style="@style/header_button_style"
+            android:background="@color/transparent"
+            android:src="@drawable/crop_cancel" />
+
+        <ImageButton
+            android:id="@+id/button_apply_action"
+            style="@style/header_button_style"
+            android:background="@color/transparent"
+            android:src="@drawable/crop_accept" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/crop_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/crop_footer"
+        android:layout_below="@+id/apply_header" />
+
+    <LinearLayout
+        android:id="@+id/crop_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#ff888888"
+        android:orientation="horizontal"
+        android:padding="2.0dip"
+        android:paddingRight="10.0dip" >
+
+        <HorizontalScrollView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_toLeftOf="@+id/button_ok"
+            android:layout_weight="3.0"
+            android:background="@drawable/border_linear_layout"
+            android:padding="3.0dip"
+            android:paddingRight="0.0dip" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="1.0dip" >
+
+                <Button
+                    android:id="@+id/button1"
+                    style="@style/ratio_button_style"
+                    android:text=" ? " />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/ratio_button_style"
+                    android:text="1:1" />
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/ratio_button_style"
+                    android:text="2:1" />
+
+                <Button
+                    android:id="@+id/button4"
+                    style="@style/ratio_button_style"
+                    android:text="1:2" />
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/ratio_button_style"
+                    android:text="3:2" />
+
+                <Button
+                    android:id="@+id/button6"
+                    style="@style/ratio_button_style"
+                    android:text="2:3" />
+
+                <Button
+                    android:id="@+id/button7"
+                    style="@style/ratio_button_style"
+                    android:text="4:3" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="@style/ratio_button_style"
+                    android:text="3:4" />
+
+                <Button
+                    android:id="@+id/button9"
+                    style="@style/ratio_button_style"
+                    android:text="4:5" />
+
+                <Button
+                    android:id="@+id/button10"
+                    style="@style/ratio_button_style"
+                    android:text="5:7" />
+
+                <Button
+                    android:id="@+id/button11"
+                    style="@style/ratio_button_style"
+                    android:text="16:9" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="@dimen/crop_button_size"
+            android:layout_height="@dimen/crop_button_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/crop_button_selector"
+            android:gravity="center"
+            android:onClick="myClickHandler"
+            android:text="@string/square_lib_footer_crop"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/ratio_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

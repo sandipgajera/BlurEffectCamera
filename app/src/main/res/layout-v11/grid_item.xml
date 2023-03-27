@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/gllery_grid_item_layout_padding" >
+
+    <com.photo.blureffectcamera.gallerylib.GallerySquareImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:id="@+id/grid_item_text_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:background="#ff111111"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="10.0dip" >
+
+        <TextView
+            android:id="@+id/textView_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="2.0"
+            android:singleLine="true"
+            android:textColor="@color/gallery_folder_path_text_color"
+            android:textSize="@dimen/gallery_grid_item_path_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1.0"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/gallery_folder_count_text_color"
+            android:textSize="@dimen/gallery_grid_item_count_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSelectedItemCount"
+        android:layout_width="@dimen/gallery_grid_item_selected_item_size"
+        android:layout_height="@dimen/gallery_grid_item_selected_item_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/gallery_grid_item_selected_item_text_size"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+</RelativeLayout>
